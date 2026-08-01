@@ -1,0 +1,107 @@
+.character-generator {
+    min-height: 100vh;
+    background-color: #1a1d21;
+    color: #e0e0e0;
+    font-family: 'Inter', 'JetBrains Mono', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.character-generator .name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    min-height: 3rem;
+    text-align: center;
+    border-bottom: 2px solid #00e5ff;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+.character-generator button {
+    background-color: transparent;
+    border: 2px solid #ffb300;
+    color: #ffb300;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.character-generator button:hover:not(:disabled) {
+    background-color: #ffb300;
+    color: #1a1d21;
+    box-shadow: 0 0 16px rgba(255, 179, 0, 0.4);
+}
+
+.character-generator button:disabled {
+    border-color: #555;
+    color: #555;
+    cursor: not-allowed;
+}
+
+.character-generator .error {
+    color: #ff5252;
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.character-details {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.character-img {
+    width: 220px;
+    height: auto;
+    border: 2px solid #00e5ff;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.25);
+}
+
+.character-details ul {
+    list-style: none;
+    margin-top: 24px;
+    padding: 20px 28px;
+    background-color: #23262b;
+    border: 1px solid #33373d;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #cfd3d8;
+}
+
+.character-details li {
+    border-bottom: 1px solid #2e3238;
+    padding: 4px 0;
+}
+
+.character-details li:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
